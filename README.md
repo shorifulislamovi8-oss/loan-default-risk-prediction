@@ -184,8 +184,6 @@ The script expects the dataset at `data/raw/default of credit card clients.xls`.
 
 ## Final Conclusion
 
-## Final Conclusion
-
 This project developed a credit default risk prediction system using Logistic Regression and Random Forest.
 
 A professional Train / Validation / Test workflow was used to avoid selecting the model or decision threshold on the final test set.

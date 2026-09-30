@@ -184,4 +184,28 @@ The script expects the dataset at `data/raw/default of credit card clients.xls`.
 
 ## Final Conclusion
 
-On the validation set, Random Forest outperformed Logistic Regression by ROC-AUC and by the minimum business cost under the stated demonstration assumptions. At the selected threshold of 0.24, its final test recall for defaults was 0.79, alongside 2144 false positives and a final demonstration cost of 3539 units. These results support further investigation, not automatic lending decisions; deployment would require business-validated costs, probability calibration, and ongoing review.
+## Final Conclusion
+
+This project developed a credit default risk prediction system using Logistic Regression and Random Forest.
+
+A professional Train / Validation / Test workflow was used to avoid selecting the model or decision threshold on the final test set.
+
+Random Forest achieved the stronger validation performance and was selected as the final model. Using the validation set, the business-cost optimized threshold was 0.24.
+
+On the untouched test set, the final model achieved:
+
+- ROC-AUC: 0.7605
+- Default Recall: 79%
+- Default Precision: 33%
+- Default F1-score: 0.46
+- True Positives: 1048
+- False Negatives: 279
+- False Positives: 2144
+- True Negatives: 2529
+- Final Business Cost: 3539 units
+
+The lower decision threshold helped identify more customers who eventually defaulted, at the cost of producing more false-positive risk flags.
+
+The business-cost values used in this project (FP = 1, FN = 5) are demonstration assumptions rather than real financial costs. In a real lending environment, the threshold should be selected using actual business costs and risk policies.
+
+The model should therefore be used as a risk-support tool for further review rather than as an automatic loan approval or rejection system.
